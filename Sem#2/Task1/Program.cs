@@ -1,2 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа
+// Например: 78 -> 8
+
+Console.Clear();
+
+int Number = new Random().Next(10,100); // число 100 не включается в интервал
+Console.WriteLine($"Полученное случайное число: {Number}"); // для удобства используется интерполяция строк
+
+int Number1 = Number / 10;
+int Number2 = Number % 10; // берём остаток от деления на 10 (возвращает остаток от деления "%")
+
+if (Number1 > Number2)
+{
+    Console.WriteLine($"Наибольшая цифра числа: {Number1}"); 
+}
+else 
+{
+    Console.WriteLine($"Наибольшая цифра числа: {Number2}");
+}
+
