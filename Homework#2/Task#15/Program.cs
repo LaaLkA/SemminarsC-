@@ -6,7 +6,7 @@
 Console.Clear();
 
 System.Console.WriteLine("Введите цифру, обозначающую день недели в РФ");
-string strNumber = Console.ReadLine();\
+string strNumber = Console.ReadLine();
 int Number = int.Parse(strNumber);
 
 if (Number < 7 && Number > 0)
