@@ -3,12 +3,14 @@
 
 Console.Clear();
 
+// const int num2 = 5; // ввод константы, которая никогда не будет изменяться
+
 int TakeNumber(string message)
 {
     Console.Write($"Введите {message}: ");
     int Number = Convert.ToInt32(Console.ReadLine());
-    if(Number < 0) Console.WriteLine("Номер четверти не может быть отрицательным!");
-    else if(Number > 4) Console.WriteLine("Существует всего 4 четверти!");
+    // if(Number < 0) Console.WriteLine("Номер четверти не может быть отрицательным!");
+    // else if(Number > 4) Console.WriteLine("Существует всего 4 четверти!");
     return Number;
 }
 
