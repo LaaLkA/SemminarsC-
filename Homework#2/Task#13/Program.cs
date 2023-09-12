@@ -8,29 +8,39 @@ Console.Clear();
 System.Console.WriteLine("Введите число");
 string strNumber = Console.ReadLine();
 int Number = int.Parse(strNumber);
-int countNumbers = 1000;
-int k = 10;
 
-if (Number < 100)
+void FindThird(int Arg)
 {
-    System.Console.WriteLine($"Третьей цифры у числа {Number} нет");
-}
-else
-{
-    while (countNumbers > Number)
-    {
+    int result = 0;
 
-        if (Number < countNumbers)
+    if (Arg < 100)
         {
-            int thirdNumber = Number % k;
-            System.Console.WriteLine($"Третьей цифрой числа {Number} является {thirdNumber}");
-            Number = Number * 10;
+            System.Console.WriteLine("Нет третьей цифры");
         }
-        else
+        else if (Arg < 1000)
         {
-            k = k * 10;
-            countNumbers = countNumbers * 10;
+            result = Arg % 10;
+            System.Console.WriteLine($"Третья цифра числа {Arg} равна {result}");
         }
-    }
-
+        else if (Arg < 10000)
+        {
+            result = Arg % 100 / 10;
+            System.Console.WriteLine($"Третья цифра числа {Arg} равна {result}");
+        }
+         else if (Arg < 100000)
+        {
+            result = Arg % 1000 / 100;
+            System.Console.WriteLine($"Третья цифра числа {Arg} равна {result}");
+        }
+          else if (Arg < 1000000)
+        {
+            result = Arg % 10000 / 1000;
+            System.Console.WriteLine($"Третья цифра числа {Arg} равна {result}");
+        }
+        else 
+        {
+            System.Console.WriteLine("Слишком большое число");
+        }
 }
+
+FindThird(Number);
