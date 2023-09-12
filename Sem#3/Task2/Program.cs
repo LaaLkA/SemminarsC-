@@ -12,13 +12,44 @@ int TakeNumber(string message)
     return Number;
 }
 
-void ShowDiap (int Number)
-{
-    if (Number == 1) Console.WriteLine($"{Number} четверти соответствуют значения: X > 0, y > 0");
-    else if(Number == 2) Console.WriteLine($"{Number} четверти соответствуют значения: X < 0, y > 0");
-    else if(Number == 3) Console.WriteLine($"{Number} четверти соответствуют значения: X < 0, y < 0");
-    else if(Number == 4) Console.WriteLine($"{Number} четверти соответствуют значения: X > 0, y < 0");
-}
+// void ShowDiap (int Number)
+// {
+//     if (Number == 1) Console.WriteLine($"{Number} четверти соответствуют значения: X > 0, y > 0");
+//     else if(Number == 2) Console.WriteLine($"{Number} четверти соответствуют значения: X < 0, y > 0");
+//     else if(Number == 3) Console.WriteLine($"{Number} четверти соответствуют значения: X < 0, y < 0");
+//     else if(Number == 4) Console.WriteLine($"{Number} четверти соответствуют значения: X > 0, y < 0");
+// }
 
-int Number = TakeNumber("Четверть");
-ShowDiap(Number);
+// int Number = TakeNumber("Четверть");
+// ShowDiap(Number);
+
+int quarter = TakeNumber("quarter");
+// switch - оператор ветвления
+switch (quarter)
+{
+    case 1: // наше число сравнили с еденицей
+    {
+        Console.WriteLine("X > 0, y > 0");
+        break;
+    }
+    case 2: // наше число сравнили с двойкой
+    {
+        Console.WriteLine("X < 0, y > 0");
+        break;
+    }
+    case 3: // наше число сравнили с тройкой
+    {
+        Console.WriteLine("X < 0, y < 0");
+        break;
+    }
+    case 4: // наше число сравнили с четверкой
+    {
+        Console.WriteLine("X > 0, y < 0");
+        break;
+    }
+    default: // срабатывает, если не сработали предидущие условия
+    {
+        Console.WriteLine("Введена неправильная четверть");
+        break;
+    }
+}
