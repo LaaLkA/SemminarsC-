@@ -14,7 +14,7 @@ int takeNumber(string message)
 void Draw(int x1, int y1, int x2, int y2)
 {
     double lengthXY = Math.Sqrt(Math.Pow(Math.Pow(x1 - x2, 2), 2) + Math.Pow(Math.Pow(y1 - y2, 2), 2));
-    Console.Write($"расстояние между точками равно {lengthXY}");
+    Console.Write($"расстояние между точками равно {Math.Round(lengthXY,2)}"); //Math.Round(*число*, *количество символов после запятой*) - округление
 }
 
 int x1 = takeNumber("x1");
