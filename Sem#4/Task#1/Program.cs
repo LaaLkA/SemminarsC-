@@ -24,3 +24,7 @@ void Write (int Number, int Sum)
 int Number = GetNumber("number");
 int Sum = GetSum(Number);
 Write(Number, Sum);
+
+int num = 10; 
+int num2 = num++;//num2 = 10; num = 10 + 1 = 11
+Console.WriteLine($"num = {num}, num2 = {num2}");
