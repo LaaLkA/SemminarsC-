@@ -8,9 +8,9 @@ int GetNumber(string message)
     int Number = Convert.ToInt32(Console.ReadLine());
     return Number;
 }
-int UmnNumber(int Number)
+long UmnNumber(int Number)
 {
-    int result = 1;
+    long result = 1;
     for (int i = 1; i <= Number; i++)
     {
         result = result * i;
@@ -19,5 +19,5 @@ int UmnNumber(int Number)
 }
 Console.Clear();
 int Number = GetNumber("number");
-int res = UmnNumber(Number);
+long res = UmnNumber(Number);
 Console.WriteLine($"Произведение чисел от 1 до {Number} = {res}");
