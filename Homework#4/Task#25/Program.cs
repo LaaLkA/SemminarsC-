@@ -7,7 +7,7 @@ int take(string message)
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
-void Mnoj (int number1, int number2)
+void Mnoj(int number1, int number2)
 {
     double Number = Math.Pow(number1, number2);
     Console.WriteLine($"{number1}, {number2} -> {Number}");

@@ -11,10 +11,10 @@ int take()
 }
 int Sum(int number)
 {
-   int Summ = 0;
-    for ( ; 0 < number; number /= 10 )
+    int Summ = 0;
+    for (; 0 < number; number /= 10)
     {
-        Summ = Summ + number%10;   
+        Summ = Summ + number % 10;
     }
     return Summ;
 }
