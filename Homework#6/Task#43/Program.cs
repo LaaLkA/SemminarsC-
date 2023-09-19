@@ -10,13 +10,13 @@ int take(string message)
 }
 
 Console.Clear();
-int b1 = take("b1");
-int k1 = take("k1");
+double b1 = take("b1");
+double k1 = take("k1");
 
-int b2 = take("b2");
-int k2 = take("k2");
+double b2 = take("b2");
+double k2 = take("k2");
 
-int x = (b2 - b1) / (k1 - k2);
-int y = k1 * x + b1;
+double x = (double)(b2 - b1) / (double)(k1 - k2);
+double y = k1 * x + b1;
 
 Console.WriteLine($"Точка пересечения - X:{x}, Y:{y}");
