@@ -5,8 +5,8 @@
 int[] take()
 {
     Console.WriteLine("Введите числа через пробел");
-    int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-    return array;
+    int[] array = Array.ConvertAll(Console.ReadLine().Split(), int.Parse); // Array.ConvertAll (*что конвертирует*, *в какой тип данных конвертирует*) - конвертирует всю строку в масиив
+    return array;                                                          // Console.ReadLine().Split() - считываем значения через пробел     
 }
 int CountNum(int[] array)
 {
