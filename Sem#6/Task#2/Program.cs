@@ -10,10 +10,8 @@ int take(string message)
 }
 void CheckTriangle(int num1, int num2, int num3)
 {
-    if (num1 > num2 + num3) System.Console.WriteLine("Такой треугольник не существует");
-    else if (num2 > num1 + num3) System.Console.WriteLine("Такой треугольник не существует");
-    else if (num3 > num1 + num2) System.Console.WriteLine("Такой треугольник не существует");
-    else System.Console.WriteLine("Такой треугольник существует");
+    if (num1 > num2 + num3 && num2 > num1 + num3 && num3 > num1 + num2) System.Console.WriteLine("Такой треугольник не существует");
+    else System.Console.WriteLine("Такой треугольник не существует");
 }
 
 Console.Clear();
