@@ -26,21 +26,26 @@ int[] CopyArray(int[] array)
     }
     return CopiedArray;
 }
-void Print(int[] array)
-{
-    System.Console.Write("[");
-    for (int i = 0; i < array.Length; i++)
-    {
-        System.Console.Write($"{array[i]}");
-        if(i + 1 < array.Length) System.Console.Write(", ");
-    }
-    System.Console.Write("]");
-    System.Console.WriteLine(" ");
-}
+// void Print(int[] array)
+// {
+//     System.Console.Write("[");
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write($"{array[i]}");
+//         if (i + 1 < array.Length) System.Console.Write(", ");
+//     }
+//     System.Console.Write("]");
+//     System.Console.WriteLine(" ");
+// }
+
 Console.Clear();
+
 int[] array = GetArray(take());
 System.Console.WriteLine("Исходный массив:");
-Print(array);
+// Print(array);
+System.Console.WriteLine(string.Join(" ", array));
+
 System.Console.WriteLine("Скопированный масиив:");
 int[] CopiedArray = CopyArray(array);
-Print(CopiedArray);
+// Print(CopiedArray);
+System.Console.WriteLine(string.Join(" ", CopiedArray));
