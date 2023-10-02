@@ -14,7 +14,7 @@ int[,] TakeMatrix(int rows, int columns)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = rand.Next(0, 10);
+            matrix[i, j] = rand.Next(0, 100);
         }
     }
     return matrix;
