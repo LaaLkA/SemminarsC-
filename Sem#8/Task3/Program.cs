@@ -4,7 +4,7 @@
 int TakeNumbers(string message)
 {
     System.Console.WriteLine($"Enter {message}");
-    int number = int.Parse(Console.ReadLine());
+    int number = int.Parse(Console.ReadLine() ?? "");
     return number;
 }
 int[,] TakeMatrix(int rows, int columns)
@@ -65,7 +65,6 @@ int[,] DeleteRowCol(int[,] matrix, int row, int col)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j == col) continue;
-            
             newMatrix[inew, jnew] = matrix[i, j];
             jnew++;
         }
