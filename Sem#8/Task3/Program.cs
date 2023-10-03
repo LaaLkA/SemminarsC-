@@ -53,16 +53,23 @@ void Print(int[,] matrix)
 int[,] DeleteRowCol(int[,] matrix, int row, int col)
 {
     int[,] newMatrix = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+
+    int inew = 0;
+
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
+        if (i == row) continue;
+
+        int jnew = 0;
+
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (i == row || j == col) continue;
-            else 
-            {
-                newMatrix[i,j]= matrix[i,j];
-            }
+            if (j == col) continue;
+            
+            newMatrix[inew, jnew] = matrix[i, j];
+            jnew++;
         }
+        inew++;
     }
     return newMatrix;
 }
